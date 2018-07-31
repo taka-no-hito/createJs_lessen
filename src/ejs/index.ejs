@@ -1,0 +1,27 @@
+  <%_
+  // ページ個別meta設定
+  var metaData = {  title:'ページのタイトル',
+                    desc:'このサイトの説明!!!'
+                  };
+  // ページ内パスの設定
+  var path = {  root: './',
+                img: '/img/top/'
+              };
+  _%>
+  <%# 共通headの呼び出し %>
+  <%- include(path.root + 'global/_head',{meta:metaData})%>
+  <%# 共通headerの呼び出し %>
+  <%- include(path.root + 'global/_header')%>
+
+  <%# ページ固有html %>
+  <main class="main top" id="top">
+    ページ本体<br>
+    <span>ほげほげ</span>
+
+  </main>
+
+
+  <%# 共通footerの呼び出し %>
+  <%- include(path.root + 'global/_footer')%>
+  <%# 共通jsの呼び出し %>
+  <%- include(path.root + 'global/_script')%>

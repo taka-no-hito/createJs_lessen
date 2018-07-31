@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------------
+//    Common items
+// --------------------------------------------------------------------------------
+// 全ページ共通設定はここで行ってください。
+
+// ＝＝＝＝＝非表示＝＝＝＝＝
+.hide { display: none !important; }
+.pc_none {
+  @include is_pc {
+    display: none !important;
+  }
+  @include is_tab {
+    display: none !important;
+  }
+}
+.sp_none {
+  @include is_sp {
+    display: none !important;
+  }
+}
+.tab_display {
+  @include is_tab {
+    display: block !important;
+  }
+}
+.tab_none {
+  @include is_tab {
+    display: none !important;
+  }
+}
+main,header,footer {
+  display: block;
+}
+body,html {
+  position: relative;
+  width: 100%;
+  color: $txt_black;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+body.fixed {
+  position: fixed;
+  width: 100%;
+}
+
+.page_wrapper {
+  position: relative;
+  @include is_sp() {
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+.main {
+  @include is_sp() {
+    overflow: hidden;
+  }
+}
+// tabズーム値
+.tab_zoom {
+  zoom: 70%;
+  // -webkit-text-size-adjust: auto;
+}
+.inner {
+  @include clearfix;
+  position: relative;
+  width: 100%;
+  max-width: $innerWidth;
+  margin: 0 auto;
+}
+.sp_inner {
+  @include clearfix;
+  position: relative;
+  @include is_sp() {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+a {
+  text-decoration: none;
+  color: $txt_hover;
+}
+* {
+  box-sizing: border-box;
+  font-family: $deviceFont;
+  font-weight: $regular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: "pkna";
+  letter-spacing: 0.03em;
+  font-size: 1.6rem;
+}
+select,input,textarea {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+}
+select::-ms-expand {
+  display: none;
+}
+// ie用svgバグ回避
+img[src$=".svg"] {
+    width: 100%;
+}
+
+// 読み込み時アニメーション対策
+.preload * {
+    transition: none !important;
+}
+

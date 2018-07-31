@@ -1,0 +1,46 @@
+@charset "UTF-8";
+// --------------------------------------------------------------------------------
+//    media
+// --------------------------------------------------------------------------------
+// メディアクエリの設定
+
+  //PC用設定
+  @mixin is_pc() {
+    @media screen and (min-width: $breakpointMax) {
+      @content;
+    }
+  }
+  //タブレット用設定
+  @mixin is_tab() {
+    @media screen and (min-width: $breakpointMin ) and (max-width: $breakpointMax) {
+      @content;
+    }
+  }
+  //tabより小さい
+  @mixin than_tab() {
+    @media screen and  (max-width: $breakpointMax) {
+      @content;
+    }
+  }
+  //SP用設定
+  @mixin is_sp() {
+    @media screen and  (max-width: $breakpointMin) {
+      @content;
+    }
+  }
+  //sp横向き
+  @mixin is_spLandscape() {
+    @media screen and (min-width: $breakpointspLandscape ) and (max-width: $breakpointMin) {
+      @content;
+    }
+  }
+
+
+
+
+
+
+
+
+
+

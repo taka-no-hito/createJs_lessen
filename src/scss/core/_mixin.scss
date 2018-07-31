@@ -1,0 +1,40 @@
+@charset "UTF-8";
+// --------------------------------------------------------------------------------
+//    Mixin items
+// --------------------------------------------------------------------------------
+
+@mixin clearfix {
+  &:after {
+    content : '';
+    display : block;
+    clear : both;
+  }
+}
+
+// 簡易アニメーション
+@mixin default_anime($target:(all),$time:.3s) {
+  transition-property: $target;
+  transition-duration: $time;
+  transition-timing-function: ease;
+}
+
+// hover
+@mixin hover($target:(all),$time: .3s) {
+  @include is_pc {
+    @include default_anime($target,$time);
+    &:hover {
+      @content;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

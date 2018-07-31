@@ -1,0 +1,57 @@
+
+// --------------------------------------------------------------------------------
+//    variable
+// --------------------------------------------------------------------------------
+//
+
+// 背景色
+$bg_black: #000;
+$bg_gray: #f2f2f2;
+$bg_white: #fff;
+
+// border色
+$line_lightGray: #d8d8d8;
+$line_darkGray: #666;
+$line_white: #fff;
+
+// text色
+$txt_white: #fff;
+$txt_black: #333;
+$txt_gray: #666;
+$txt_hover: #444;
+
+
+// ボタン色
+$btn_gray: #ccc;
+
+
+// その他特殊色
+
+
+// hover
+$defOpacity: .7;
+
+
+
+// font
+$deviceFont: "Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+
+
+// font weight
+$light: 300;
+$regular:400;
+$medium: 500;
+$bold: 700;
+$fontBlack: 900;
+
+// path
+$commonPath: '/img/common/';
+
+
+// width
+$innerWidth: 1240px;
+$cintents_innerWidth: 1040px;
+// breakpoint
+$breakpointMax: 1024px;
+$breakpointMin: 767px;
+$breakpointspLandscape: 500px;
